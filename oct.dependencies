@@ -16,5 +16,11 @@
    "repository": "proprietary_vendor_lge",
    "target_path": "vendor/lge",
    "revision": "cm-11.0"
- }
+ },
+ { 
+   "remote": "gh",
+   "repository": "NPOmni/vendor_qcom",
+   "target_path": "vendor/qcom",
+   "revision": "4.4.2"
+}
 ]
