@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    HammerheadDoze
+
 PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     libgenlock \
