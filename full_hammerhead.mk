@@ -44,3 +44,6 @@ BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 # fix slow rom flash
 BOARD_NO_SECURE_DISCARD := true
+
+# fix video recording
+TARGET_USES_LEGACY_CAMHAL := false
