@@ -27,6 +27,17 @@ BOARD_KERNEL_PAGESIZE := 2048
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
+
+# Build using uber toolchain
+TARGET_GCC_VERSION_EXP := 4.9-uber
+
+# inline kernel building
+TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
+TARGET_KERNEL_CONFIG := hammerhead_defconfig
+TARGET_VARIANT_CONFIG := hammerhead_defconfig
+TARGET_SELINUX_CONFIG := hammerhead_defconfig
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8-uber/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 TOUCH_BOOST_DEBUG := false
